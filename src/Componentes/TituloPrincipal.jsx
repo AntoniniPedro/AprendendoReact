@@ -1,8 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 function TituloPrincipal(props){
   const [titulo, setTitulo] = useState(props.titulo ?? "Ola mundo");
+
+
+  useEffect(() => {
+    console.log("titulo mudou");
+  },[]);
 
   function clickCallBack(event){
     alert("Obrigado por clicar")
